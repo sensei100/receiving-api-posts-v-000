@@ -6732,3 +6732,267 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:14:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 613ms (Views: 578.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:21:29 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-09-30 17:21:29 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-30 17:21:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-09-30 17:21:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-30 17:21:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-09-30 17:21:29 -0400
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:21:35 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kk9zh0vmP0jusFnepnbXFZr88TN29F6Eq3ZOP4fN0kjsQ2mCSRPHh/cj9wQ2yGmTBSkaL7P+A39aGx7H4rTOBg==", "post"=>{"title"=>"test", "description"=>"test"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test"], ["description", "test"], ["created_at", "2016-09-30 21:21:35.691447"], ["updated_at", "2016-09-30 21:21:35.691447"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 31ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/posts/15" for ::1 at 2016-09-30 17:21:35 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:23:06 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-30 17:23:06 -0400
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-09-30 17:23:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-09-30 17:23:07 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-30 17:23:07 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-09-30 17:23:07 -0400
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:23:17 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+h6JFLccpDHazbrh9hnwXNcfGiWDNB8WjdYOKRv1rKOEEpMRtelc/sNeFDtmp07aSMrxOUY+Qu18u17Rfoyw7Q==", "post"=>{"title"=>"another", "description"=>"try"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "another"], ["description", "try"], ["created_at", "2016-09-30 21:23:17.442902"], ["updated_at", "2016-09-30 21:23:17.442902"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/16
+Completed 302 Found in 12ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/posts/16" for ::1 at 2016-09-30 17:23:17 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:30:16 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 69ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-09-30 17:30:16 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-30 17:30:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-09-30 17:30:16 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-30 17:30:16 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-09-30 17:30:16 -0400
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:30:22 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-30 17:30:22 -0400
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-09-30 17:30:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-09-30 17:30:22 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-30 17:30:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-09-30 17:30:22 -0400
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:30:31 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9i8lFKv/qTD/uen7yAStF3wCMMdhORMPHu8S097Xcbh1KaRUFoGa9ptSX1/nqwywiXj39iOubfNFuyzKgJBiA==", "post"=>{"title"=>"does it ", "description"=>"work?"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "does it "], ["description", "work?"], ["created_at", "2016-09-30 21:30:31.132793"], ["updated_at", "2016-09-30 21:30:31.132793"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Completed 201 Created in 14ms (Views: 5.0ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:30:33 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9i8lFKv/qTD/uen7yAStF3wCMMdhORMPHu8S097Xcbh1KaRUFoGa9ptSX1/nqwywiXj39iOubfNFuyzKgJBiA==", "post"=>{"title"=>"does it ", "description"=>"work?"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "does it "], ["description", "work?"], ["created_at", "2016-09-30 21:30:33.544485"], ["updated_at", "2016-09-30 21:30:33.544485"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:30:34 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9i8lFKv/qTD/uen7yAStF3wCMMdhORMPHu8S097Xcbh1KaRUFoGa9ptSX1/nqwywiXj39iOubfNFuyzKgJBiA==", "post"=>{"title"=>"does it ", "description"=>"work?"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "does it "], ["description", "work?"], ["created_at", "2016-09-30 21:30:34.244482"], ["updated_at", "2016-09-30 21:30:34.244482"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:31:12 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-30 17:31:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-09-30 17:31:12 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-30 17:31:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-09-30 17:31:12 -0400
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-09-30 17:31:12 -0400
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:31:20 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bqqT0INixvVgTEQ8jras/k6hD56Z+qhdESE4tT2pjKwQponVgZc+Onnf6uYeCBJ40XTkglzw9abgTGhNWNCQ4g==", "post"=>{"title"=>"hello", "description"=>"please"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "hello"], ["description", "please"], ["created_at", "2016-09-30 21:31:20.520736"], ["updated_at", "2016-09-30 21:31:20.520736"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:33:06 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-30 17:33:06 -0400
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-09-30 17:33:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-09-30 17:33:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-30 17:33:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-09-30 17:33:06 -0400
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:33:12 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W8yhESQ0lLFU42T2gJRXnrXKqyaBttBsTpO32MgxA6olwLsUJsFsfk1wyiwQKukYKh9AOkS8jZe//ucgrUgf5A==", "post"=>{"title"=>"another", "description"=>"try"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "another"], ["description", "try"], ["created_at", "2016-09-30 21:33:12.741174"], ["updated_at", "2016-09-30 21:33:12.741174"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Completed 201 Created in 9ms (Views: 0.4ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:33:13 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W8yhESQ0lLFU42T2gJRXnrXKqyaBttBsTpO32MgxA6olwLsUJsFsfk1wyiwQKukYKh9AOkS8jZe//ucgrUgf5A==", "post"=>{"title"=>"another", "description"=>"try"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "another"], ["description", "try"], ["created_at", "2016-09-30 21:33:13.472086"], ["updated_at", "2016-09-30 21:33:13.472086"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:33:14 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W8yhESQ0lLFU42T2gJRXnrXKqyaBttBsTpO32MgxA6olwLsUJsFsfk1wyiwQKukYKh9AOkS8jZe//ucgrUgf5A==", "post"=>{"title"=>"another", "description"=>"try"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "another"], ["description", "try"], ["created_at", "2016-09-30 21:33:14.087500"], ["updated_at", "2016-09-30 21:33:14.087500"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-30 17:34:00 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-30 17:34:00 -0400
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-09-30 17:34:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-09-30 17:34:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-09-30 17:34:00 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-30 17:34:00 -0400
+
+
+Started POST "/posts" for ::1 at 2016-09-30 17:34:06 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRZChj65z5xq88zo9WYKPOHElWgjjY7wwL37HslkVfvPGliDPEw3U3NgYjJl2LS6fhF+dOaH0wsx0KvmrB1JtQ==", "post"=>{"title"=>"another", "description"=>"try"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "another"], ["description", "try"], ["created_at", "2016-09-30 21:34:06.654452"], ["updated_at", "2016-09-30 21:34:06.654452"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 2.7ms)
